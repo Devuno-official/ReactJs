@@ -1,12 +1,12 @@
+import {Button} from './Button';
 
-let App = function(){
+function App(){
      return (
         <div>
-            <h1>Start React js </h1>
-            <p>This is my first React app</p>
-            <button>Click Me</button>
-        </div>
+          <Button />
+           <h1>hello jain</h1>
+        </div>    
      );
 }
 
-export default App;
+export default App; 
