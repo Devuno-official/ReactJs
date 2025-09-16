@@ -14,9 +14,15 @@ function App() {
             <input type="date" name="date" id="date" />
           </div>
           <div class="col col-lg-2">
-            <button type="button" class="btn btn-primary task">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
               Add Task
             </button>
+            <ModalBOX />
           </div>
         </div>
       </div>
