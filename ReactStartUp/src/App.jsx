@@ -1,11 +1,11 @@
-import {Button} from './Button';
+import Rendering from "./components/renderingLists";
+import RenderCard from "./components/RenderCard"
 
 function App(){
      return (
-        <div>
-          <Button />
-           <h1>hello jain</h1>
-        </div>    
+     <>
+         <RenderCard />   
+     </>   
      );
 }
 
