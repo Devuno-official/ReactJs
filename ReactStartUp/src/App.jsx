@@ -4,9 +4,10 @@ import RenderCard from "./components/RenderCard"
 function App(){
      return (
      <>
-         <RenderCard />   
-     </>   
+     <Rendering />
+     <RenderCard/>
+     </>       
      );
 }
 
-export default App; 
+export default App;           
