@@ -1,13 +1,18 @@
 import Rendering from "./components/renderingLists";
-import RenderCard from "./components/RenderCard"
+import CardProduct from "./components/CardProduct";
 
-function App(){
-     return (
-     <>
-     <Rendering />
-     <RenderCard/>
-     </>       
-     );
+const user = [
+  { title: "Banana", color: "pink", id: 1 },
+  { title: "tomotes", color: "lightblue", id: 2 },
+  { title: "watermelon", color: "blue", id: 3 },
+];
+
+function App() {
+  return (
+    <>
+      <CardProduct items={user} />
+    </>
+  );
 }
 
-export default App;           
+export default App;
