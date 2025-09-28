@@ -1,34 +1,19 @@
 import ShowTask from "./Components/showTask";
-import ModalBOX from "./Components/model";
+import UiKit from "./Components/UiComponent";
+
+const userTask = [
+  {task : "EveryWeek end with a Project ", id:1},
+   {task : "6 hours of coding daily with " ,id:2},
+   {task:"Next week plaining ",id:3} 
+];
+
 function App() {
   return (
-    <div>
+    <>
       <h1 className="text-center heading">Todo List</h1>
-      <div class="container text-center taskBar">
-        <div class="row justify-content-md-center"></div>
-        <div class="row rowDiv">
-          <div class="col-6">
-            <input type="text" placeholder="enter here" />
-          </div>
-          <div class="col-md-auto">
-            <input type="date" name="date" id="date" />
-          </div>
-          <div class="col col-lg-2">
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Add Task
-            </button>
-            <ModalBOX />
-          </div>
-        </div>
-      </div>
-      <ShowTask />
-      <ShowTask />
-    </div>
+      <UiKit />
+      <ShowTask userTask = {userTask} />
+    </>
   );
 }
 
