@@ -10,7 +10,8 @@ const user = [
 function App() {
   return (
     <>
-      <CardProduct items={user} />
+     <Rendering />
+      <CardProduct  items={user} />
     </>
   );
 }

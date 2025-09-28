@@ -4,23 +4,31 @@ const products = [
   { title: "watermelon", isFruit: true, id: 3 },
 ];
 
-const listItems = products.map((product) => {
-  return (
-    <li
-      key={product.id}
-      style={{
-        color: product.isFruit ? "magenta" : "darkgreen",
-      }}
-    >
-      {product.title}
-    </li>
-  );
-});
+
+// List component that is taking porps from its parent
+function List({ Fruit }) {
+  Fruit.map((item) => {
+    return (
+      <li
+       key={item.id}
+        style={{
+          color: item.isFruit ? "magenta" : "darkgreen",
+        }}
+      >
+        {item.title}
+      </li>
+    );
+  });
+}
+
+
 
 let Rendering = function () {
   return (
     <>
-      <ul>{listItems}</ul>
+      <ul>
+        <List key={products.id} Fruit={products} /> {/* take children list  */}
+      </ul>
     </>
   );
 };

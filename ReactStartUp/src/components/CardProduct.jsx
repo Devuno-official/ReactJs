@@ -8,6 +8,7 @@ function CardProduct({ items }) {
         {items.map((item) => {
           return (
             <div
+            key={item.id}
               className="top"
               style={{
                 color: item.color
