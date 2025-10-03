@@ -1,6 +1,5 @@
 import Rendering from "./components/renderingLists";
 import CardProduct from "./components/CardProduct";
-
 const user = [
   { title: "Banana", color: "pink", id: 1 },
   { title: "tomotes", color: "lightblue", id: 2 },
