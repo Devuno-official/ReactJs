@@ -1,24 +1,26 @@
 // * Calculater Ui and than logic 
 import Container from "./Components/Container";
 import Btn from "./Components/Button";
-function App() {
-    
 
+
+export default function App() {
+ const changeValue = function(event){
+   let textVal = event.target.value;
+           console.log(textVal);
+                   
+ }
+
+    let arr = ['1️', '2️', '3️', '✖️', '4️', '5️', '6️', '➗', '7️', '8️', '9️', '➕', '0️', '➖','⬅','🟰'];
     return (
         <>
-          {/* <input type="text" className=" border" required /> */}
         <Container>
-          <div className="groups bg-amber-900 w-[90%] h-[90%]">
-            <div className="top bg-pink-800 w-full h-[50px]">
-              <input type="text" name="input" id="input" className="w-full h-[50px]" />
+            <input type="text" name="input" id="input" className="w-[20%] h-[15%] bg-black rounded-t-2xl text-white border-none outline-none" onChange={changeValue}/>
+            <div className="bg-black w-[20%] h-[50%] gap-1  grid grid-cols-4 grid-rows-3 place-content-center overflow-hidden rounded-b-2xl">
+                <Btn symbol={arr}></Btn>
             </div>
-              <div className="buttom bg-gray-600 w-full h-[90%] grid overflow-hidden grid-cols-4 grid-rows-1 gap-2">
-                <Btn></Btn>
-              </div>
-          </div>
         </Container>
         </>
     );
 }
 
-export default App
+
