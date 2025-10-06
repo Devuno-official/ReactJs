@@ -37,8 +37,11 @@ html,body{
 } 
 
 .button{
-     width: 40px;
-     height: 30px;
-    background-image: radial-gradient(lightblue,skyblue
-    );
+     width: 20%;
+     height: 80px;
+    background-image: radial-gradient(lightblue,skyblue );
+     border: none;
+     border-radius: 5px;
+     cursor:pointer;
+
 }
