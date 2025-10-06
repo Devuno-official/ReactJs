@@ -1,6 +1,7 @@
 import Rendering from "./components/renderingLists";
 import CardProduct from "./components/CardProduct";
-import HandleEvent from "./components/HandleEvent";
+import Sculpture from "./components/sculpture";
+import { useState } from "react";
 
 const user = [
   { title: "Banana", color: "pink", id: 1 },
@@ -8,19 +9,15 @@ const user = [
   { title: "watermelon", color: "blue", id: 3 },
 ];
 
-const ClickEvent = function(e) {
-  e.stopPropagation();         //* react special syntheticBaseEvent object 
-  document.body.style = "Black";
-}
-
-
 
 function App() {
+
+
+
+
   return (
     <>
-      <Rendering />
-      <HandleEvent ClickEvent={ClickEvent} /> {/*pass function via props */}
-      <CardProduct items={user} />
+      <Sculpture></Sculpture>
     </>
   );
 }
