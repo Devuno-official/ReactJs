@@ -10,7 +10,7 @@ function List({ Fruit }) {
   Fruit.map((item) => {
     return (
       <li
-       key={item.id}
+        key={item.id}
         style={{
           color: item.isFruit ? "magenta" : "darkgreen",
         }}
@@ -33,4 +33,4 @@ let Rendering = function () {
   );
 };
 
-export default Rendering;
+export default Rendering; 

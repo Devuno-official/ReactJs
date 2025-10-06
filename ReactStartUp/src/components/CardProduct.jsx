@@ -1,14 +1,14 @@
 
-function CardProduct({ items }) {
+export default function CardProduct({ items }) {
   return (
     <>
       <div className="Card" style={{
-          color:items.color
+        color: items.color
       }}>
         {items.map((item) => {
           return (
             <div
-            key={item.id}
+              key={item.id}
               className="top"
               style={{
                 color: item.color
@@ -23,4 +23,3 @@ function CardProduct({ items }) {
   );
 }
 
-export default CardProduct;
