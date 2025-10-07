@@ -1,7 +1,7 @@
 import Rendering from "./components/renderingLists";
 import CardProduct from "./components/CardProduct";
 import Sculpture from "./components/sculpture";
-import { useState } from "react";
+
 
 const user = [
   { title: "Banana", color: "pink", id: 1 },
@@ -12,11 +12,10 @@ const user = [
 
 function App() {
 
-
-
-
   return (
     <>
+     <Rendering></Rendering>
+     <CardProduct items={user} ></CardProduct>
       <Sculpture></Sculpture>
     </>
   );
