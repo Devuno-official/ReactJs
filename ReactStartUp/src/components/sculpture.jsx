@@ -13,7 +13,7 @@ export default function Sculpture() {
     const nextHandle = function () {
         setClick(index + 1 );
         if(index === 11 ){
-            setClick(index = 0);
+            setClick(0);
              return ;
         }
     }
@@ -21,7 +21,7 @@ export default function Sculpture() {
 const perviousHandle = function(){
           setClick(index - 1);
           if(index === 0 ){
-            setClick(index = 11);
+            setClick(11);
              return;
           }     
 }
