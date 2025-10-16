@@ -1,0 +1,11 @@
+.task-container {
+  min-height: 100%;
+  background: #2a7ed3;
+     padding: 2rem;  
+}
+
+@media (max-width: 768px) {
+  .task-container {
+    padding: 1rem !important;
+  }
+}    
