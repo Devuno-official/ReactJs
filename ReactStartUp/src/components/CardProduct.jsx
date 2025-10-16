@@ -1,17 +1,19 @@
-
 export default function CardProduct({ items }) {
   return (
     <>
-      <div className="Card" style={{
-        color: items.color
-      }}>
+      <div
+        classNameName="Card"
+        style={{
+          color: items.color,
+        }}
+      >
         {items.map((item) => {
           return (
             <div
               key={item.id}
-              className="top"
+              classNameName="top"
               style={{
-                color: item.color
+                color: item.color,
               }}
             >
               <p key={item.id}>{item.title}</p>
@@ -22,4 +24,3 @@ export default function CardProduct({ items }) {
     </>
   );
 }
-
