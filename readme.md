@@ -60,8 +60,8 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
-// Class Component
-class Welcome extends React.Component {
+// className Component
+className Welcome extends React.Component {
   render() {
     return <h1>Hello, {this.props.name}</h1>;
   }
@@ -165,7 +165,7 @@ function App() {
 1. **Component Organization**
 
    - Keep components small and focused
-   - Use functional components over class components
+   - Use functional components over className components
    - Follow the Single Responsibility Principle
 
 2. **State Management**
