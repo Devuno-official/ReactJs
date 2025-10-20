@@ -1,17 +1,17 @@
 import "./Container.css";
+import Header from "./Header";
 
-export default function Container(props) {
+export default function Container({ children }) {
+  // Get actual task count from children if ShowTask component is present
+  const taskCount = Array.isArray(children)
+    ? children.filter((child) => child.type?.name === "ShowTask").length
+    : 0;
+
   return (
-    <div className="task-container ">
-      <div
-        className=" bg-white rounded-2 shadow-lg"
-        style={{
-          maxWidth: "800px",
-          background: "linear-gradient(145deg, #ffffff, #f0f0f0)",
-          boxShadow: "20px 20px 60px #bebebe, -20px -20px 60px #ffffff",
-        }}
-      >
-        {props.children}
+    <div className="task-container">
+      <div className="task-wrapper bg-white shadow-sm">
+        <Header taskCount={taskCount} />
+        <div className="task-content-area">{children}</div>
       </div>
     </div>
   );

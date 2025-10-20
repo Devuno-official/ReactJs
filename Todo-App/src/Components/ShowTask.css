@@ -21,3 +21,56 @@
   box-shadow: none;
   border-color: rgba(0,0,0,.125);
 }
+
+/* Google-tasks like, mobile-first styles */
+.task-list {
+  width: 100%;
+  background: #fff;
+}
+
+.task-item {
+  background: #fff;
+}
+
+.task-item .d-flex {
+  gap: 0.75rem;
+}
+
+.task-content h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0f172a; /* slate-900 */
+}
+
+.task-preview small {
+  color: #64748b; /* slate-500 */
+}
+
+.task-actions .btn {
+  min-width: 40px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+.task-details p {
+  color: #0f172a;
+  margin: 0;
+}
+
+/* separators */
+.task-item.border-bottom {
+  border-bottom: 1px solid #e6e9ee;
+}
+
+@media (max-width: 576px) {
+  .task-actions .btn {
+    min-width: 36px;
+    height: 32px;
+  }
+  .task-content h3 {
+    font-size: 0.98rem;
+  }
+}
