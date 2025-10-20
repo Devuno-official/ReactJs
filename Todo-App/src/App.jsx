@@ -1,5 +1,4 @@
 import ShowTask from "./Components/showTask";
-import Button from "./Components/UiComponent";
 import Modal from "./Components/Modal";
 import { useState } from "react";
 import Container from "./Components/Container";
@@ -34,7 +33,6 @@ function App() {
   return (
     <>
       <Container>
-        <Button />
         <ShowTask userTask={userTask} />
         <Modal
           HeadingHandle={HeadingHandle}
