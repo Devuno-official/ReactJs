@@ -1,8 +1,9 @@
-export default function Modal({ HeadingHandle, TaskHandle, saveHandle}) {
+export default function Modal({ HeadingHandle, TaskHandle, saveHandle }) {
+ 
   return (
     <>
       <div
-        className='modal fade' 
+        className="modal fade"
         id="exampleModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
