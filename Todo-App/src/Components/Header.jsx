@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Header({ taskCount = 0 }) {
+export default function Header({ taskCount }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
@@ -47,7 +47,6 @@ export default function Header({ taskCount = 0 }) {
                 data-bs-target="#exampleModal"
               >
                 <i className="bi bi-plus-lg"></i>
-                <span className="fw-medium">New Task</span>
               </button>
             </>
           )}
