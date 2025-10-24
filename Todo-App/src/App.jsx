@@ -12,14 +12,14 @@ function App() {
 
   function HeadingHandle(e) {
    // e.stopPropagation();
-     heading =+ e.target.value;
+     heading = e.target.value;
      heading = heading.trim();
        setheading(heading);
   }
 
   function TaskHandle(e) {
      // e.stopPropagation();
-    task =+ e.target.value; 
+    task = e.target.value; 
     settask(task.trim());
   }
 
