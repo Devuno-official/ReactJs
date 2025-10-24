@@ -37,8 +37,8 @@ function App() {
     if (storeTask.heading.length > 0 && storeTask.task.length > 0) {
       let Val = [...userTask, storeTask];
       setuserTask(Val);
-      settaskCount(userTask.length + 1);
     } 
+      settaskCount(userTask.length + 1);
   }
 
   return (
