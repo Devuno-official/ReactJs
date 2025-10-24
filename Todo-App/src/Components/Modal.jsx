@@ -1,5 +1,10 @@
-export default function Modal({ HeadingHandle, TaskHandle, saveHandle }) {
- 
+export default function Modal({
+  HeadingHandle,
+  TaskHandle,
+  saveHandle,
+  //heading,
+  //task,
+}) {
   return (
     <>
       <div
@@ -13,7 +18,7 @@ export default function Modal({ HeadingHandle, TaskHandle, saveHandle }) {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
-                New message
+                New Task
               </h1>
               <button
                 type="button"
@@ -32,6 +37,7 @@ export default function Modal({ HeadingHandle, TaskHandle, saveHandle }) {
                     type="text"
                     className="form-control"
                     id="recipient-name"
+                    //value={heading}
                     onChange={HeadingHandle}
                   />
                 </div>
@@ -42,6 +48,7 @@ export default function Modal({ HeadingHandle, TaskHandle, saveHandle }) {
                   <textarea
                     className="form-control"
                     id="message-text"
+                    //value={task}
                     onChange={TaskHandle}
                   ></textarea>
                 </div>
