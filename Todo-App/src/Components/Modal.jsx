@@ -1,9 +1,11 @@
+import { FaSave } from "react-icons/fa";
+import { MdCancel } from "react-icons/md";
 export default function Modal({
   HeadingHandle,
   TaskHandle,
   saveHandle,
-  //heading,
-  //task,
+  heading,
+  task,
 }) {
   return (
     <>
@@ -11,14 +13,14 @@ export default function Modal({
         className="modal fade"
         id="exampleModal"
         tabIndex="-1"
+        role="dialog"
         aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
       >
-        <div className="modal-dialog">
+        <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
-                New Task
+                New Task  
               </h1>
               <button
                 type="button"
@@ -28,27 +30,30 @@ export default function Modal({
               ></button>
             </div>
             <div className="modal-body">
-              <form>
+              <form onSubmit={(e) => e.preventDefault()}>
                 <div className="mb-3">
-                  <label htmlFor="recipient-name" className="col-form-label">
+                  <label htmlFor="task-heading" className="form-label">
                     Heading
                   </label>
                   <input
                     type="text"
                     className="form-control"
-                    id="recipient-name"
-                    //value={heading}
+                    id="task-heading"
+                    name="heading"
+                    value={heading}
                     onChange={HeadingHandle}
+                    aria-required="true"
+                    placeholder="Enter task heading"
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="message-text" className="col-form-label">
-                    Task
+                  <label htmlFor="task-description" className="form-label">
+                    Task Description
                   </label>
                   <textarea
                     className="form-control"
-                    id="message-text"
-                    //value={task}
+                    id="task-description"
+                    value={task}
                     onChange={TaskHandle}
                   ></textarea>
                 </div>
@@ -59,15 +64,17 @@ export default function Modal({
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
+                aria-label="Close modal"
               >
-                Close
+               <MdCancel />
               </button>
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary"
                 onClick={saveHandle}
+                aria-label="Save task"
               >
-                Save
+                <FaSave />
               </button>
             </div>
           </div>
