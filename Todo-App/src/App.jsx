@@ -11,34 +11,30 @@ function App() {
   let [taskCount, settaskCount] = useState(0);
 
   function HeadingHandle(e) {
-   // e.stopPropagation();
-     heading = e.target.value;
-     heading = heading.trim();
-       setheading(heading);
+    e.preventDefault();
+    setheading(e.target.value);
   }
 
   function TaskHandle(e) {
-     // e.stopPropagation();
-    task = e.target.value; 
-    settask(task.trim());
+    e.preventDefault();
+    settask(e.target.value);
   }
 
   function saveHandle() {
-    
-     console.log(task);
-     console.log(heading);
-    
-    let storeTask = {
-      heading: heading,
-      task: task,
+    if (!heading.trim() || !task.trim()) {
+              return;
+    }
+
+    const newTask = {
+      heading: heading.trim(),
+      task: task.trim(),
       id: taskCount,
     };
 
-    if (storeTask.heading.length > 0 && storeTask.task.length > 0) {
-      let Val = [...userTask, storeTask];
-      setuserTask(Val);
-    } 
-      settaskCount(userTask.length + 1);
+    setuserTask([...userTask, newTask]);
+    settaskCount(taskCount + 1);
+    setheading("");
+    settask("");
   }
 
   return (
@@ -47,7 +43,7 @@ function App() {
         <Header taskCount={taskCount} />
         <ShowTask userTask={userTask} />
         <Modal
-         HeadingHandle={HeadingHandle}
+           HeadingHandle={HeadingHandle}
           TaskHandle={TaskHandle}
           saveHandle={saveHandle}
           heading={heading}
