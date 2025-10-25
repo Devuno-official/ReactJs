@@ -1,7 +1,6 @@
 import "./Container.css";
 
 export default function Container({ children }) {
-
   return (
     <div className="task-container">
       <div className="task-wrapper bg-white shadow-sm">
