@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { MdAddTask } from "react-icons/md";
+import { GoTasklist } from "react-icons/go";
 export default function Header({ taskCount }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -8,7 +9,7 @@ export default function Header({ taskCount }) {
       <div className="d-flex align-items-center justify-content-between p-3">
         <div className="d-flex align-items-center gap-3">
           <h1 className="h5 mb-0 text-primary fw-bold d-flex align-items-center gap-2">
-            <i className="bi bi-check2-square"></i>
+           <GoTasklist />
             Tasks
           </h1>
           <span className="badge bg-primary-subtle text-primary rounded-pill px-2">
@@ -46,7 +47,7 @@ export default function Header({ taskCount }) {
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
-                <i className="bi bi-plus-lg"></i>
+               <MdAddTask />
               </button>
             </>
           )}
